@@ -82,7 +82,7 @@ h2 {
 #banner {
 	position: relative;
 	overflow: hidden;
-	background-image: url( "images/sunny.jpg" );
+	/* background-image: url( "images/sunny.jpg" ); */
 	/* background: #F6CEF5; */ /* 연다홍 #F5A9A9 */ /* 연보라 #D5C2EE */
 	color: #fff;
 	text-align: center;
@@ -109,7 +109,7 @@ h2 {
 
 .one {
 	text-align: center;
-    font-size: 60%;	
+    font-size: 80%;	
 	color:black;
 }
 
@@ -410,7 +410,7 @@ table thead {
 													<option value="1800">30분</option>
 													<option value="900">15분</option>
 													<option value="1">1초</option>
-											</select><br> <input type="button" value="GO!" onclick="noodle()">
+											</select><br> <input type="button" value="GO!" onclick="noodle()" style="cursor: pointer;">
 												<br> <br> <span id="countdown">time
 													selected</span> <br> <br> <!-- <input type="button" value="Close"
 									onclick='window.close()'> -->

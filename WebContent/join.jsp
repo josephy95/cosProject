@@ -14,6 +14,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 
+	<style>
+	
+	#skinType {
+
+    -webkit-appearance: none;  /* 네이티브 외형 감추기 */
+    -moz-appearance: none;
+    appearance: none;
+    background: url(./images/triangle.png) no-repeat 97% 50%;  /* 화살표 모양의 이미지 */
+    background-size: contain;
+    
+}
+
+
+	
+	</style>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -65,22 +80,37 @@
 									<label>아이디</label>
 									<input type="text" name="id" class="form-control">
 								</div>
+								<br>
 								<div class="form-group">
 									<label>비밀번호</label>
 									<input type="password" name="pw" class="form-control">
 								</div>
+								<br>
 								<div class="form-group">
 									<label>이름</label>
 									<input type="text" name="name" class="form-control">
 								</div>
+								<br>
 								<div class="form-group">
 									<label>연락처</label>
 									<input type="text" name="phone" class="form-control">
 								</div>
+								<br>
 								<div class="form-group">
 									<label>E-MAIL</label>
 									<input type="text" name="email" class="form-control">
 								</div>
+								<br>
+								<div class="form-group">
+                  					<label>피부타입</label>
+								<select id="skinType" name="mySelect" style="text-align-last : center;" >
+			           	          <option hidden >자신의 피부 타입을 선택하세요!</option>
+			          	          <option value="건성" >건성</option>
+			            	      <option value="지성">지성</option>
+			              	      <option value="복합성">복합성</option>
+			          	        </select>						
+								</div>					
+								
 								<p></p>
 								<div class="form-group text-right" align = center>
 									<button class="btn btn-primary btn-block">회원가입</button>
@@ -108,7 +138,7 @@
 
 			<div id="copyright" class="container">
 				<ul class="links">
-					<li>© Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					<li>© Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">JIN6IX__O</a></li>
 				</ul>
 			</div>
 

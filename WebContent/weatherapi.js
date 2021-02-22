@@ -60,8 +60,8 @@ function loadWeather(data) {
     let minutes = date.getMinutes();
 
     location.append(data.name);
-    currentTemp.append(`${data.main.temp}`);
-    feelsLike.append(`${data.main.feels_like}`);
+    currentTemp.append(`${data.main.temp}℃`);
+    feelsLike.append(`${data.main.feels_like}℃`);
     /*maxTemp.append(`최고: ${data.main.temp_max}`);
     minTemp.append(`최저: ${data.main.temp_min}`);*/
     humidity.append(`${data.main.humidity}%`);
