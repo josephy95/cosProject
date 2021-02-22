@@ -347,7 +347,7 @@ table thead {
 										}
 									%>
 								</div>
-								<!-- 미세먼지 불러오기 -->
+								<!-- 미세먼지 불러오기  -->
 								<div>
 									<%
 										if (Integer.parseInt(weatherlist.get(10)) <= 15) {
