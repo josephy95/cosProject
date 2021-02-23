@@ -93,8 +93,8 @@ function loadWeather(data) {
     } 
 	 
 	else if(`${data.main.humidity}`<= 60){
-        $(".yoseph2").append("<header><span class='date'>닥터지 레드 블레미쉬 클리어 수딩 크림</span></header>");	
-        $(".yoseph2").append("<a href='#' class='image featured'><img src='images/good1.jpg'></a>")
+        $(".yoseph2").append("<header><span class='date'>닥터지 레드블레미쉬 클리어 수딩크림</span></header>");	
+        $(".yoseph2").append("<a href='#' class='image featured'><img src='images/good1.png'></a>")
         $(".yoseph2").append("<p> #피부진정 <br> #수분충전 <br> #촉촉한 젤 크림 <br> #여드름성 피부 사용 가능 </p>")
     }
       
