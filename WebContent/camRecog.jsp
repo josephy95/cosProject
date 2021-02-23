@@ -104,7 +104,7 @@ String id = member.getId();
 
 				<!-- Logo -->
 				<h1 id="logo">
-					<a href="index.jsp"> Search Ingredient</a>
+					<a href="index.jsp"> Search Ingredient 준석아 알려줘</a>
 				</h1>
 				<p>카메라를 이용한 성분 확인</p>
 
@@ -283,13 +283,21 @@ String id = member.getId();
                     let rest = result.imgData.length;
 
                     let total = my + harm + rest;
-                    let dv1Width = parseInt(800 * (my / total));
-                    let dv2Width = parseInt(800 * (harm / total));
-                    let dv3Width = parseInt(800 * (rest / total));
+                    let dv1Width = parseInt(600 * (my / total));
+                    let dv2Width = parseInt(600 * (harm / total));
+                    let dv3Width = parseInt(600 * (rest / total));
 					
                     $('#main').css("text-align", "-webkit-center");
-                    $('#main').append("<div style='display: flex; width: 800px;' id='colorContainer'><div style='background-color: yellow; height: 5rem; width :" + dv1Width + "px;' class='dv1'> </div><div class='dv2' style='background-color: red; height: 5rem; width :" + dv2Width + "px;'> </div><div class='dv3' style = 'background-color: green; height: 5rem;width :" + dv3Width + "px;'> </div></div>")
-
+                    
+                    $('#main').append("<br><br>")
+                    $('#main').append("<div style ='text-align: -webkit-center;'>")
+                    $('#main').append("<div style='display: flex; width: 600px;' id='colorContainer'><div style='background-color: #99A1C6; height: 5rem; width :" + dv1Width + "px;' class='dv1'> </div><div class='dv2' style='background-color: #E9A19B; height: 5rem; width :" + dv2Width + "px;'> </div><div class='dv3' style = 'background-color: #86DCBD; height: 5rem;width :" + dv3Width + "px;'> </div></div>")
+                    $('#main').append("<br>")
+                	$('#main').append("<div>")
+                	
+                	// 바의 색깔이 어떤걸 의미하는지 알려주는 코드
+                	$('#main').append("<div style='display: flex; justify-content: center;'><div style='width: 20px; height: 20px; background-color: #99A1C6;'></div><span style='padding-left: 10px;'>나랑 안맞는 성분</span><div style='width: 20px; height: 20px; background-color: #E9A19B; margin-left: 10px;'></div><span style='padding-left: 10px;'>유해 성분</span><div style='width: 20px; height: 20px; background-color: #86DCBD; margin-left: 10px;'></div><span style='padding-left: 10px;'>나머지 성분</span></div></div>");
+                  
                 },
                 error: function (a, b, c) {
                     alert("fail")
