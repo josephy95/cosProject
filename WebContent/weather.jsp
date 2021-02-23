@@ -82,7 +82,7 @@ h2 {
 #banner {
 	position: relative;
 	overflow: hidden;
-	background-image: url( "images/cloudy3.jpg" );
+	background-image: url( "images/background1.jpg" );
 	/* background: #F6CEF5; */ /* 연다홍 #F5A9A9 */ /* 연보라 #D5C2EE */
 	color: #fff;
 	text-align: center;
