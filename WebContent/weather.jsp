@@ -82,7 +82,7 @@ h2 {
 #banner {
 	position: relative;
 	overflow: hidden;
-	/* background-image: url( "images/sunny.jpg" ); */
+	background-image: url( "images/cloudy3.jpg" );
 	/* background: #F6CEF5; */ /* 연다홍 #F5A9A9 */ /* 연보라 #D5C2EE */
 	color: #fff;
 	text-align: center;
@@ -109,7 +109,7 @@ h2 {
 
 .one {
 	text-align: center;
-    font-size: 63%;	
+    font-size: 60%;	
 	color:black;
 }
 
@@ -347,7 +347,7 @@ table thead {
 										}
 									%>
 								</div>
-								<!-- 미세먼지 불러오기 -->
+								<!-- 미세먼지 불러오기  -->
 								<div>
 									<%
 										if (Integer.parseInt(weatherlist.get(10)) <= 15) {

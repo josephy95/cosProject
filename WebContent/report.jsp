@@ -6,11 +6,6 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.model.memberDTO"%>
 <!DOCTYPE HTML>
-<!--
-	Strongly Typed by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Right Sidebar - Strongly Typed by HTML5 UP</title>
@@ -78,8 +73,8 @@
 					<div class="container">
 
 						<!-- Logo -->
-							<h1 id="logo"><a href="index.html"></a></h1>
-							<p>A responsive HTML5 site template. Manufactured by HTML5 UP.</p>
+							<h1 id="logo">알러지 제보 페이지<a href="index.html"></a></h1>
+							<p>화장품 성분으로 인해 이상 증상이 있다면 <br>증상을 제보해 해주세요!</p>
 							
 							
 			
