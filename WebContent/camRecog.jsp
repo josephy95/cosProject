@@ -37,8 +37,8 @@ html, body {
 
 #camera, #camera--view, #camera--sensor, #camera--output {
 	position: inherit;
-	height: 167.5px;
-	width: 355px;
+	height: 290px;
+	width: 350px;
 	object-fit: contain;
 }
 
@@ -144,7 +144,7 @@ String id = member.getId();
 		<!-- Main -->
 		<section id="main">
 			<div class="container">
-				<div class="row">
+				
 
 
 
@@ -156,10 +156,10 @@ String id = member.getId();
 					<!-- Content -->
 					<div id="content" class="col-8 col-12-medium imp-medium">
 
-						<!-- Post -->
-						<article class="box post">
+						<!-- Post --><!-- 
+						<article class="box post"> -->
 							<header1 align="center">
-							<h2>촬영을 통해 성분을 분석하고 적합하지 않은 성분을 찾아요.</h2>
+							<h2>촬영을 통해 성분을 분석하고 나에게 맞지 않는 성분을 찾아요.</h2>
 							</header1>
 							<br>
 							<div>
@@ -176,9 +176,9 @@ String id = member.getId();
 
 								</main>
 							</div>
-					
+					<!-- 
 
-						</article>
+						</article> -->
 						<div style="width: 150px; height: 150px;"></div>
 
 						<div id="buttons">
@@ -195,7 +195,7 @@ String id = member.getId();
 						<p></p>
 					</div>
 
-				</div>
+				
 			</div>
 		</section>
 
@@ -205,7 +205,7 @@ String id = member.getId();
 			<div id="copyright" class="container">
 				<ul class="links">
 					<li>&copy; Untitled. All rights reserved.</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					<li>Design: <a href="http://html5up.net">JIN6IX__O</a></li>
 				</ul>
 			</div>
 		</section>
@@ -246,7 +246,7 @@ String id = member.getId();
             cameraOutput.classList.add("taken");
             console.log(cameraSensor.height);
           
-            $("#camera--output").css(padding-left: 70px;);
+            $("#camera--output").css();
         });
        /*  function imgSend(){
         	$.ajax({
