@@ -1802,6 +1802,7 @@ input, select, textarea {
 		font-size: 0.85em;
 		letter-spacing: 2px;
 		padding: 0.85em 2.75em 0.85em 2.75em;
+		cursor: pointer;
 	}
 
 		input[type="button"].icon:before,

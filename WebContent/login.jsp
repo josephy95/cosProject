@@ -27,8 +27,6 @@
 							<p>당신의 피부를 안전하게 지켜주세요</p>
 
 						<!-- Nav -->
-						
-							<!-- Nav -->
 						<nav id="nav">
 							<ul>
 								
@@ -44,6 +42,7 @@
 								<li><a class="icon solid fa-cog" href="camRecog.jsp"><span>OCR 이용 이미지 인식</span></a></li>
 								<li><a class="icon solid fa-retweet" href="weather.jsp"><span>날씨별 화장품 추천</span></a></li>
 								<li><a class="icon solid fa-sitemap" href="BefoHis"><span>나의 사용목록 추가</span></a></li>
+								<li><a class="icon solid fa-sitemap" href="BefoAller"><span>알러지 제보</span></a></li>
 							</ul>
 						</nav>
 
