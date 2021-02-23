@@ -309,9 +309,9 @@ table thead {
       <table  class = "memTable" style="text-align: center; border: 1px solid">
          <thead>
             <tr>
-               <th style="text-align: center; width: 150px; border: 1px;">번호</th>
-               <th style="text-align: center; width: 150px; border: 1px;">제품명</th>
-               <th style="text-align: center; width: 150px; border: 1px;">평가</th>
+               <th style="text-align: center; width: 25%; border: 1px;">번호</th>
+               <th style="text-align: center; width: 50%; border: 1px;">제품명</th>
+               <th style="text-align: center; width: 25%; border: 1px;">평가</th>
             </tr>
          </thead>
          <tbody id = "ajaxTable2">
