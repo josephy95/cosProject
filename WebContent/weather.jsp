@@ -82,23 +82,25 @@ h2 {
 #banner {
 	position: relative;
 	overflow: hidden;
-	background-image: url( "images/background1.jpg" );
+	background-image: url( "images/background3.JPG" );
 	/* background: #F6CEF5; */ /* 연다홍 #F5A9A9 */ /* 연보라 #D5C2EE */
-	color: #fff;
-	text-align: center;
-	border-top: solid 2px #e5e5e5;
-	border-bottom: solid 2px #e5e5e5;
-	box-shadow: inset 0px -8px 0px 0px #fff, inset 0px 8px 0px 0px #fff;
-	position: relative;
-	text-transform: uppercase;
-	background-size: cover;
-	padding: 10em 0;
+	color : #fff;
+	text-align : center;
+	border-top : solid 2px #e5e5e5;
+	border-bottom : solid 2px #e5e5e5;
+	box-shadow : inset 0px -8px 0px 0px #fff, inset 0px 8px 0px 0px #fff;
+	position : relative;
+	text-transform : uppercase;
+	background-size : cover;
+	padding : 10em 0;
 }
 .weather-container {
+		
 		padding: 30px;
         text-align: center;
         background-color: #ffffff;
-        background-color: rgba( 255, 255, 255, 0.9 );
+        background-color: rgba( 255, 255, 255, 0.9 ) ;
+        border-radius : 12px;
         
         /* opacity: 0.5; 글씨를 까맣게 하려면 이것을 쓰면 배경과 같이 하얗게 되서 안됨. rgba를 써야함*/
 }
@@ -300,8 +302,7 @@ table thead {
 							<!-- <ul class="divided">
                                     <li></li>
                                  </ul> -->
-							<br>
-							<h3>현재</h3>							
+							<br>							
 
 							<div>
 								<!-- 습도 불러오기 -->
