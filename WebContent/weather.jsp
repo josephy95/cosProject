@@ -182,7 +182,7 @@ table thead {
 					<a href="index.html">Today Skin Weather</a>
 				</h1>
 				<p>당신의 피부를 안전하게 지켜주세요.</p>
-<!-- Nav -->
+						<!-- Nav -->
 						<nav id="nav">
 							<ul>
 								
