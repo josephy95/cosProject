@@ -280,7 +280,7 @@ table thead {
       <table class="selectTable" style="text-align: center; border: 1px solid">
          <thead>
             <tr>
-               <th style="text-align: center; width: 150px; border: 1px;">회사명</th>
+               <th style="text-align: center; width: 95px; border: 1px;">회사명</th>
                <th style="text-align: center; width: 150px; border: 1px;">제품명</th>
                <th style="text-align: center; width: 150px; border: 1px;">사진</th>
                 <th style="text-align: center; width: 150px; border: 1px;">평가</th>

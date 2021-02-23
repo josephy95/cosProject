@@ -68,7 +68,7 @@
         	table td {
 			vertical-align: middle !important;
 		}
-        
+     
         
         </style>
 	</head>
@@ -84,7 +84,7 @@
 							<p>화장품 성분으로 인해 이상 증상이 있다면 <br>증상을 제보해 해주세요!</p>
 							
 							
-			
+		
 
 				<!-- Nav -->
 						<nav id="nav">
@@ -157,8 +157,11 @@
 		         		<option value="홍반">홍반</option>
 		         	</select>
 		         </td>
-		         <td class="hello" ><button style="font-family: inherit;"   onclick="insertAller(<%= i %>)">제보</button></td>
+		         <td class="hello" ><button style="font-family: inherit; background : #e9a19b;"   onclick="insertAller(<%= i %>)">제보</button></td>
 		         
+		         
+		         
+		          
 		        	
 	         </tr>
 	      <%} %>
@@ -177,9 +180,9 @@
          <thead>
             <tr>
             
-               <th style="text-align: center; width: 150px; border: 1px;">번호</th>
-               <th style="text-align: center; width: 150px; border: 1px;">회사</th>
-               <th style="text-align: center; width: 150px; border: 1px;">제품명</th>
+               <th style="text-align: center; width: 100px; border: 1px;">번호</th>
+               <th style="text-align: center; width: 120px; border: 1px;">회사</th>
+               <th style="text-align: center; width: 300px; border: 1px;">제품명</th>
                <th style="text-align: center; width: 150px; border: 1px;">증상</th>
             </tr>
          </thead>
