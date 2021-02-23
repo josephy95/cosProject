@@ -183,12 +183,15 @@ String id = member.getId();
 
 						<div id="buttons">
 
-							<form action="http://118.40.82.69:9000/imgUp" method="post"
+							<%-- <form action="http://118.40.82.69:9000/imgUp" method="post"
 								enctype="multipart/form-data">
 								<input type="hidden" name='memId' value="<%=id%>"> <input
 									type="hidden" name="inputUrl" id="inputUrl" value="">
 								<input type="submit" id="sendUrl" value="분석하기">
-							</form>
+							</form> --%>
+							
+							
+							<button id="sendUrl" >분석하기</button>
 							<button id="camera--trigger">사진촬영</button>
 						</div>
 
@@ -241,7 +244,7 @@ String id = member.getId();
             cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
             cameraOutput.src = cameraSensor.toDataURL("image/webp");
             imgUrl = $("#camera--output").attr('src');
-            $("#inputUrl").val(imgUrl);
+            // $("#inputUrl").val(imgUrl); 인풋 히든 타입에 넣을 값 
             // alert(imgUrl); imgUrl 이 잘 전달되는지 확인했음 잘 전달됨 
             cameraOutput.classList.add("taken");
             console.log(cameraSensor.height);
@@ -258,6 +261,43 @@ String id = member.getId();
     
         // 페이지가 로드되면 함수 실행
         window.addEventListener("load", cameraStart, false);
+        
+        $("#sendUrl").click(function () {
+            var id = "<%=id%>";
+            var url = imgUrl;
+            $.ajax({
+                url: "http://118.40.82.69:9000/imgUp",
+                type: "GET",
+                data: { memId: id},
+                dataType: "json",
+                success: function (result) {
+/* 		    			alert(result); 바꿔
+*/		    $('#main').empty();
+                    // 나랑 안맞는 성분 개수 길이
+                    console.log("들어오니");
+                    console.log(result.myNotData.length);
+                    let my = result.myNotData.length;
+                    // 유해성분 개수 길이
+                    let harm = result.harmfulList.length;
+                    // 나머지 성분 개수 길이
+                    let rest = result.imgData.length;
+
+                    let total = my + harm + rest;
+                    let dv1Width = parseInt(800 * (my / total));
+                    let dv2Width = parseInt(800 * (harm / total));
+                    let dv3Width = parseInt(800 * (rest / total));
+					
+                    $('#main').css("text-align", "-webkit-center");
+                    $('#main').append("<div style='display: flex; width: 800px;' id='colorContainer'><div style='background-color: yellow; height: 5rem; width :" + dv1Width + "px;' class='dv1'> </div><div class='dv2' style='background-color: red; height: 5rem; width :" + dv2Width + "px;'> </div><div class='dv3' style = 'background-color: green; height: 5rem;width :" + dv3Width + "px;'> </div></div>")
+
+                },
+                error: function (a, b, c) {
+                    alert("fail")
+                    alert(b)
+                    alert(c)
+                }
+            })
+        });
     </script>
 
 	<!-- Scripts -->

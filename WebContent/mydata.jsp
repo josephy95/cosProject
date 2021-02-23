@@ -181,6 +181,7 @@ tr > td:nth-child(4){
 
 button{
    background: white;
+   cursor: pointer;
 }
 .GOOD:hover {
    background: #4472C4;
@@ -248,7 +249,8 @@ table thead {
 								</li>
 								<li><a class="icon solid fa-cog" href="camRecog.jsp"><span>OCR 이용 이미지 인식</span></a></li>
 								<li><a class="icon solid fa-retweet" href="weather.jsp"><span>날씨별 화장품 추천</span></a></li>
-								<li><a class="icon solid fa-sitemap" href="mydata.jsp"><span>나의 사용목록 추가</span></a></li>
+								<li><a class="icon solid fa-sitemap" href="BefoHis"><span>나의 사용목록 추가</span></a></li>
+								<li><a class="icon solid fa-sitemap" href="BefoAller"><span>알러지 제보</span></a></li>
 							</ul>
 						</nav>
 
@@ -264,8 +266,8 @@ table thead {
                         <input class="form-control" placeholder="제품 이름을 입력해 주세요!" name = "proName" id="proName"type="text" size="20"></span>
                         <% request.setCharacterEncoding("EUC-KR"); %>
                         <span style="padding-top: 0px; padding-left: 0px;">
-                        <button class="btn btn-primary" id="proNameBtn" onclick="searchFunction();" type="button"style="text-align = center;padding-top: 0px;padding-left: 0px;"><img src="./images/search.png"></button></span>
-                     	<h1 id="moveMemList" onclick="moveEvent1()">나의 이력 보러가기 !
+                        <button class="btn btn-primary" id="proNameBtn" onclick="searchFunction();" type="button"style="text-align = center;padding-top: 0px;padding-left: 0px; cursor: pointer;"><img src="./images/search.png"></button></span>
+                     	<h1 id="moveMemList" onclick="moveEvent1()" style="cursor: pointer;">나의 이력 보러가기 !
                      	<!-- <img style ="width:40px; height:40px;" src="images/to-do-list.png"> -->
                      	</h1>
                      </div>

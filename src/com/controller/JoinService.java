@@ -34,7 +34,7 @@ public class JoinService extends HttpServlet {
 		if (cnt>0) {
 			System.out.println("회원가입 성공");
 			session.setAttribute("dto", dto);
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("login.jsp");
 		}
 		else {
 			System.out.println("회원가입 실패");
