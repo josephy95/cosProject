@@ -109,7 +109,7 @@ h2 {
 
 .one {
 	text-align: center;
-    font-size: 80%;	
+    font-size: 63%;	
 	color:black;
 }
 
@@ -411,8 +411,8 @@ table thead {
 													<option value="900">15분</option>
 													<option value="1">1초</option>
 											</select><br> <input type="button" value="GO!" onclick="noodle()" style="cursor: pointer;">
-												<br> <br> <span id="countdown">time
-													selected</span> <br> <br> <!-- <input type="button" value="Close"
+												<br> <br> <span id="countdown">Time
+													Selected</span> <br> <br> <!-- <input type="button" value="Close"
 									onclick='window.close()'> -->
 										</div>
 								</li>
