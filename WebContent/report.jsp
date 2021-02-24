@@ -126,7 +126,7 @@
 											
 											
 											
-      <h1><strong style="font-size: 28px;"><%=name %> </strong>님의 이용목록</h1>
+      <h1><strong style="font-size: 28px;"><%=name %> </strong>님의 이용목록 <strong>🤧</strong></h1>
       <br>
       <table  class = "badTable2" style="text-align: center; border: 1px solid">
          <thead>

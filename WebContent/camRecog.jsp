@@ -279,6 +279,9 @@ String id = member.getId();
                     let harm = result.harmfulList.length;
                     // 나머지 성분 개수 길이
                     let rest = result.imgData.length;
+                   	
+                    
+                    
 
                     let total = my + harm + rest;
                     let dv1Width = parseInt(600 * (my / total));
@@ -295,7 +298,24 @@ String id = member.getId();
                 	
                 	// 바의 색깔이 어떤걸 의미하는지 알려주는 코드
                 	$('#main').append("<div style='display: flex; justify-content: center;'><div style='width: 20px; height: 20px; background-color: #99A1C6;'></div><span style='padding-left: 10px;'>나랑 안맞는 성분</span><div style='width: 20px; height: 20px; background-color: #E9A19B; margin-left: 10px;'></div><span style='padding-left: 10px;'>유해 성분</span><div style='width: 20px; height: 20px; background-color: #86DCBD; margin-left: 10px;'></div><span style='padding-left: 10px;'>나머지 성분</span></div></div>");
-                  
+                    
+                    // 성분이 어떤게 있는지 알려주는 코드
+                    // 나랑 안맞는 성분
+                    $('#main').append("<div class='eleList' style='display: flex;'><div style='width: 20px; height: 20px; background-color: #99A1C6;'></div><span style='padding-left: 10px;'>나랑 안맞는 성분 :</span><span style='padding-left: 10px;'id='notMine'></span></div><br>");
+                    for(let i = 0; i < my; i++;){
+                    	$('#notMine').append(result.myNotData[i]);
+						if(i != my-1){
+							$("#notMine").append(",");
+						}
+                    }
+                    $('#main').append("<div class='eleList' style='display: flex;'><div style='width: 20px; height: 20px; background-color: #E9A19B;'></div><span style='padding-left: 10px;'>유해 성분 :</span><span style='padding-left: 10px;' id ='harmEle'></span></div>");
+                    for(let i = 0; i < harm; i++;){
+                    	$('#harmEle').append(result.harmfulList[i]);
+						if(i != harm-1){
+							$("#harmEle").append(",");
+						}
+                    }
+                    
                 },
                 error: function (a, b, c) {
                     alert("fail")
