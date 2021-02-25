@@ -87,9 +87,6 @@ html, body {
 	/* 사진을 거울처럼 보기 */
 	position: contain;
 }
-
-
-
 </style>
 <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
 
@@ -113,27 +110,29 @@ String id = member.getId();
 
 				<!-- Logo -->
 
-			
+
 
 				<!-- Nav -->
-						<nav id="nav">
+				<nav id="nav">
+					<ul>
+
+						<li><a class="icon solid fa-home" href="index.jsp"><span>HOME</span></a></li>
+
+						<li display=hidden><a href="#" class="icon fa-chart-bar"><span>회원가입/로그인</span></a>
 							<ul>
-								
-								<li><a class="icon solid fa-home" href="index.jsp"><span>HOME</span></a></li>
-								
-								<li display = hidden>
-									<a href="#" class="icon fa-chart-bar"><span>회원가입/로그인</span></a>
-									<ul>
-										<li><a href="join.jsp">회원가입</a></li>
-										<li><a href="login.jsp">로그인</a></li>
-									</ul>
-								</li>
-								<li><a class="icon solid fa-cog" href="camRecog.jsp"><span>OCR 이용 이미지 인식</span></a></li>
-								<li><a class="icon solid fa-retweet" href="mise"><span>날씨별 화장품 추천</span></a></li>
-								<li><a class="icon solid fa-sitemap" href="BefoHis"><span>나의 사용목록 추가</span></a></li>
-								<li><a class="icon solid fa-sitemap" href="BefoAller"><span>알러지 제보</span></a></li>
-							</ul>
-						</nav>
+								<li><a href="join.jsp">회원가입</a></li>
+								<li><a href="login.jsp">로그인</a></li>
+							</ul></li>
+						<li><a class="icon solid fa-cog" href="camRecog.jsp"><span>OCR
+									이용 이미지 인식</span></a></li>
+						<li><a class="icon solid fa-retweet" href="mise"><span>날씨별
+									화장품 추천</span></a></li>
+						<li><a class="icon solid fa-sitemap" href="BefoHis"><span>나의
+									사용목록 추가</span></a></li>
+						<li><a class="icon solid fa-sitemap" href="BefoAller"><span>알러지
+									제보</span></a></li>
+					</ul>
+				</nav>
 
 
 
@@ -145,7 +144,6 @@ String id = member.getId();
 		<!-- Main -->
 		<section id="main">
 			<div class="container">
-				
 
 
 
@@ -154,48 +152,56 @@ String id = member.getId();
 
 
 
-					<!-- Content -->
-						<header1 align="center">
-							<h2>촬영을 통해 성분을 분석하고 <br> <strong>나에게 맞지 않는 성분</strong>을 찾아요.</h2>
-							</header1>
-					<div id="content" class="col-8 col-12-medium imp-medium">
 
-						<!-- Post --><!-- 
+				<!-- Content -->
+				<header1 align="center">
+				<h2>
+					촬영을 통해 성분을 분석하고 <br> <strong>나에게 맞지 않는 성분</strong>을 찾아요.
+				</h2>
+				</header1>
+				<div id="content" class="col-8 col-12-medium imp-medium">
+
+					<!-- Post -->
+					<!-- 
 						<article class="box post"> -->
-						
-							<br>
-							<div style="text-align: center; height: 350px">
-								<main id="camera">
-									<canvas id="camera--sensor"></canvas>
 
-									<!-- 기기의 카메라에 접근하여 영상을 페이지에 재생한다. -->
-									<video id="camera--view" autoplay playsinline  style="margin-left: 20px;"></video>
+					<br>
+					<div style="text-align: center; height: 350px">
+						<main id="camera">
+							<canvas id="camera--sensor"></canvas>
 
-									<img src="./images/cam.png" alt="" id="camera--output" style="visibility: hidden; width: 0px;">
-									<!-- 카메라 이미지 넣어서 찍는거 조절하기... img 크기 조절도 해야해 -->
+							<!-- 기기의 카메라에 접근하여 영상을 페이지에 재생한다. -->
+							<video id="camera--view" autoplay playsinline
+								style="margin-left: 20px;"></video>
 
-								</main>
-							</div>
+							<img src="./images/cam.png" alt="" id="camera--output"
+								style="visibility: hidden; width: 0px;">
+							<!-- 카메라 이미지 넣어서 찍는거 조절하기... img 크기 조절도 해야해 -->
+
+						</main>
+					</div>
 					<!-- 
 
 						</article> -->
-						<div style="width: 100px; height: 100px;"></div>
+					<div style="width: 100px; height: 100px;"></div>
 
-				
 
-						<p></p>
-					</div>
-					<div id ="camRecogButton" style ="display : flex; place-content: center;"> 
-							<button id="sendUrl" style ="font-family: inherit;" >분석하기</button>
-							
-							<button id="camera--trigger" style ="font-family: inherit; margin-left: 20px;">사진촬영</button>
-					</div>
-					
-					
-					
-					<div id = "result">  </div>
 
-				
+					<p></p>
+				</div>
+				<div id="camRecogButton"
+					style="display: flex; place-content: center;">
+					<button id="sendUrl" style="font-family: inherit;">분석하기</button>
+
+					<button id="camera--trigger"
+						style="font-family: inherit; margin-left: 20px;">사진촬영</button>
+				</div>
+
+
+
+				<div id="result"></div>
+
+
 			</div>
 		</section>
 
