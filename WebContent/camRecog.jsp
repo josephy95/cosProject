@@ -156,7 +156,7 @@ String id = member.getId();
 						<!-- Post --><!-- 
 						<article class="box post"> -->
 							<header1 align="center">
-							<h2>촬영을 통해 성분을 분석하고 나에게 맞지 않는 성분을 찾아요.</h2>
+							<h2>촬영을 통해 성분을 분석하고 <br>나에게 맞지 않는 성분을 찾아요.</h2>
 							</header1>
 							<br>
 							<div style="text-align: center;">
