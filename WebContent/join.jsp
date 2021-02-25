@@ -70,7 +70,7 @@
 		<div class="container">
 				<div class="box-body">
 							<P></P>
-							<h2 align = center><strong>회원가입</strong></h2>
+							<h2 align = center><strong style="font-size: 1.5em;">회원가입</strong></h2>
 							<P4 align = center><strong>필수 입력 사항</strong></P4>
 
 							<p></p>
@@ -102,17 +102,18 @@
 								<br>
 								<div class="form-group">
                   					<label>피부타입</label>
-								<select id="skinType" name="mySelect" style="text-align-last : center;" >
+								<select id="skinType" name="mySelect" style="text-align-last : center; background-color: #e8e8e8;" >
 			           	          <option hidden >자신의 피부 타입을 선택하세요!</option>
 			          	          <option value="건성" >건성</option>
 			            	      <option value="지성">지성</option>
 			              	      <option value="복합성">복합성</option>
 			          	        </select>						
 								</div>					
-								
-								<p></p>
+								<br>
+								<br>
+								<br>
 								<div class="form-group text-right" align = center>
-									<button class="btn btn-primary btn-block">회원가입</button>
+									<button class="btn btn-primary btn-block" style="font-family: inherit;">회원가입</button>
 								</div>
 								<p></p>
 								<div class="form-group text-center">

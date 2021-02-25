@@ -169,7 +169,7 @@ String id = member.getId();
 									<canvas id="camera--sensor"></canvas>
 
 									<!-- 기기의 카메라에 접근하여 영상을 페이지에 재생한다. -->
-									<video id="camera--view" autoplay playsinline style="margin-left: 20px;"></video>
+									<video id="camera--view" autoplay playsinline  style="margin-left: 20px;"></video>
 
 									<img src="./images/cam.png" alt="" id="camera--output" style="visibility: hidden; width: 0px;">
 									<!-- 카메라 이미지 넣어서 찍는거 조절하기... img 크기 조절도 해야해 -->

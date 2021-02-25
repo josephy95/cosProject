@@ -304,7 +304,7 @@ table thead {
 	
 %>
       <div class = "nuribox" id="memList">
-      <h1><%=name %>님의 이용목록</h1>
+      <h1 style="font-size: 1.5em;"><%=name %>님의 이용목록</h1>
       <br>
       <table  class = "memTable" style="text-align: center; border: 1px solid">
          <thead>
@@ -392,7 +392,7 @@ table thead {
                </div> -->
                <div id="copyright" class="container">
                   <ul class="links">
-                     <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                     <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">JIN6IX__O</a></li>
                   </ul>
                </div>
             </section>
