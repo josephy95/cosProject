@@ -58,7 +58,6 @@ html, body {
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0, 0.2);
 	position: sticky;
 	bottom: 30px;
-	left: calc(50% - 90px);
 }
 
 .taken {
@@ -104,35 +103,33 @@ String id = member.getId();
 
 				<!-- Logo -->
 				<h1 id="logo">
-					<a href="index.jsp"> Search Ingredient</a>
+					<a href="index.jsp"> Check The Ingredients</a>
 				</h1>
 				<p>카메라를 이용한 성분 확인</p>
 
 				<!-- Logo -->
 
-				<!-- Nav -->
+			
 
 				<!-- Nav -->
-				<nav id="nav">
-					<ul>
-
-						<li><a class="icon solid fa-home" href="index.jsp"><span>HOME</span></a></li>
-
-						<li display=hidden><a href="#" class="icon fa-chart-bar"><span>회원가입/로그인</span></a>
+						<nav id="nav">
 							<ul>
-								<li><a href="join.jsp">회원가입</a></li>
-								<li><a href="login.jsp">로그인</a></li>
-							</ul></li>
-						<li><a class="icon solid fa-cog" href="camRecog.jsp"><span>OCR
-									이용 이미지 인식</span></a></li>
-						<li><a class="icon solid fa-retweet" href="weather.jsp"><span>날씨별
-									화장품 추천</span></a></li>
-						<li><a class="icon solid fa-sitemap" href="BefoHis"><span>나의
-									사용목록 추가</span></a></li>
-					</ul>
-				</nav>
-
-				<!-- Nav -->
+								
+								<li><a class="icon solid fa-home" href="index.jsp"><span>HOME</span></a></li>
+								
+								<li display = hidden>
+									<a href="#" class="icon fa-chart-bar"><span>회원가입/로그인</span></a>
+									<ul>
+										<li><a href="join.jsp">회원가입</a></li>
+										<li><a href="login.jsp">로그인</a></li>
+									</ul>
+								</li>
+								<li><a class="icon solid fa-cog" href="camRecog.jsp"><span>OCR 이용 이미지 인식</span></a></li>
+								<li><a class="icon solid fa-retweet" href="mise"><span>날씨별 화장품 추천</span></a></li>
+								<li><a class="icon solid fa-sitemap" href="BefoHis"><span>나의 사용목록 추가</span></a></li>
+								<li><a class="icon solid fa-sitemap" href="BefoAller"><span>알러지 제보</span></a></li>
+							</ul>
+						</nav>
 
 
 
@@ -159,10 +156,10 @@ String id = member.getId();
 						<!-- Post --><!-- 
 						<article class="box post"> -->
 							<header1 align="center">
-							<h2>촬영을 통해 성분을 분석하고 나에게 맞지 않는 성분을 찾아요.</h2>
+							<h2>촬영을 통해 성분을 분석하고 <br>나에게 맞지 않는 성분을 찾아요.</h2>
 							</header1>
 							<br>
-							<div>
+							<div style="text-align: center;">
 								<main id="camera">
 									<canvas id="camera--sensor"></canvas>
 
@@ -171,7 +168,7 @@ String id = member.getId();
 										style="visibility: hidden; width: 0; height: 0;"></video>
 
 									<img src="./images/cam.png" alt="" id="camera--output"
-										style="position: absolute;">
+										style="position: absolute; padding-right: 41px">
 									<!-- 고라파덕 부분에 카메라 이미지 넣어서 찍는거 조절하기... img 크기 조절도 해야해 -->
 
 								</main>
@@ -191,8 +188,8 @@ String id = member.getId();
 							</form> --%>
 							
 							
-							<button id="sendUrl" >분석하기</button>
-							<button id="camera--trigger">사진촬영</button>
+							<button id="sendUrl" style ="font-family: inherit;" >분석하기</button>
+							<button id="camera--trigger" style ="font-family: inherit;">사진촬영</button>
 						</div>
 
 						<p></p>
@@ -249,7 +246,7 @@ String id = member.getId();
             cameraOutput.classList.add("taken");
             console.log(cameraSensor.height);
           
-            $("#camera--output").css();
+            $("#camera--output").css("padding-right", "200px");
         });
        /*  function imgSend(){
         	$.ajax({
@@ -281,15 +278,44 @@ String id = member.getId();
                     let harm = result.harmfulList.length;
                     // 나머지 성분 개수 길이
                     let rest = result.imgData.length;
+                   	
+                    
+                    
 
                     let total = my + harm + rest;
-                    let dv1Width = parseInt(800 * (my / total));
-                    let dv2Width = parseInt(800 * (harm / total));
-                    let dv3Width = parseInt(800 * (rest / total));
+                    let dv1Width = parseInt(600 * (my / total));
+                    let dv2Width = parseInt(600 * (harm / total));
+                    let dv3Width = parseInt(600 * (rest / total));
 					
                     $('#main').css("text-align", "-webkit-center");
-                    $('#main').append("<div style='display: flex; width: 800px;' id='colorContainer'><div style='background-color: yellow; height: 5rem; width :" + dv1Width + "px;' class='dv1'> </div><div class='dv2' style='background-color: red; height: 5rem; width :" + dv2Width + "px;'> </div><div class='dv3' style = 'background-color: green; height: 5rem;width :" + dv3Width + "px;'> </div></div>")
-
+                    
+                    $('#main').append("<br><br>")
+                    $('#main').append("<div style ='text-align: -webkit-center;'>")
+                    $('#main').append("<div style='display: flex; width: 600px;' id='colorContainer'><div style='background-color: #99A1C6; height: 5rem; width :" + dv1Width + "px;' class='dv1'> </div><div class='dv2' style='background-color: #E9A19B; height: 5rem; width :" + dv2Width + "px;'> </div><div class='dv3' style = 'background-color: #86DCBD; height: 5rem;width :" + dv3Width + "px;'> </div></div>")
+                    $('#main').append("<br>")
+                	$('#main').append("<div>")
+                	
+                	// 바의 색깔이 어떤걸 의미하는지 알려주는 코드
+                	$('#main').append("<div style='display: flex; justify-content: center;'><div style='width: 20px; height: 20px; background-color: #99A1C6;'></div><span style='padding-left: 10px;'>나랑 안맞는 성분</span><div style='width: 20px; height: 20px; background-color: #E9A19B; margin-left: 10px;'></div><span style='padding-left: 10px;'>유해 성분</span><div style='width: 20px; height: 20px; background-color: #86DCBD; margin-left: 10px;'></div><span style='padding-left: 10px;'>나머지 성분</span></div></div>");
+                    $('#main').append("<br>");
+                    
+                    // 성분이 어떤게 있는지 알려주는 코드
+                    // 나랑 안맞는 성분
+                    $('#main').append("<div class='eleList' style='display: flex; padding-left: 6rem'><div style='width: 20px; height: 20px; background-color: #99A1C6;'></div><span style='padding-left: 10px;'>나랑 안맞는 성분 :</span><span style='padding-left: 10px;'id='notMine'></span></div><br>");
+                    for(let i = 0; i < my; i++){
+                    	$('#notMine').append(result.myNotData[i]);
+						if(i != my-1){
+							$("#notMine").append(",");
+						}
+                    }
+                    $('#main').append("<div class='eleList' style='display: flex; padding-left: 6rem'><div style='width: 20px; height: 20px; background-color: #E9A19B;'></div><span style='padding-left: 10px;'>유해 성분 :</span><span style='padding-left: 10px;' id ='harmEle'></span></div>");
+                    for(let i = 0; i < harm; i++){
+                    	$('#harmEle').append(result.harmfulList[i]);
+						if(i != harm-1){
+							$("#harmEle").append(",");
+						}
+                    }
+                    
                 },
                 error: function (a, b, c) {
                     alert("fail")

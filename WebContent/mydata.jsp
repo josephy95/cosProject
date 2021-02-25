@@ -248,7 +248,7 @@ table thead {
 									</ul>
 								</li>
 								<li><a class="icon solid fa-cog" href="camRecog.jsp"><span>OCR 이용 이미지 인식</span></a></li>
-								<li><a class="icon solid fa-retweet" href="weather.jsp"><span>날씨별 화장품 추천</span></a></li>
+								<li><a class="icon solid fa-retweet" href="mise"><span>날씨별 화장품 추천</span></a></li>
 								<li><a class="icon solid fa-sitemap" href="BefoHis"><span>나의 사용목록 추가</span></a></li>
 								<li><a class="icon solid fa-sitemap" href="BefoAller"><span>알러지 제보</span></a></li>
 							</ul>
@@ -280,7 +280,7 @@ table thead {
       <table class="selectTable" style="text-align: center; border: 1px solid">
          <thead>
             <tr>
-               <th style="text-align: center; width: 150px; border: 1px;">회사명</th>
+               <th style="text-align: center; width: 95px; border: 1px;">회사명</th>
                <th style="text-align: center; width: 150px; border: 1px;">제품명</th>
                <th style="text-align: center; width: 150px; border: 1px;">사진</th>
                 <th style="text-align: center; width: 150px; border: 1px;">평가</th>
@@ -309,9 +309,9 @@ table thead {
       <table  class = "memTable" style="text-align: center; border: 1px solid">
          <thead>
             <tr>
-               <th style="text-align: center; width: 150px; border: 1px;">번호</th>
-               <th style="text-align: center; width: 150px; border: 1px;">제품명</th>
-               <th style="text-align: center; width: 150px; border: 1px;">평가</th>
+               <th style="text-align: center; width: 25%; border: 1px;">번호</th>
+               <th style="text-align: center; width: 50%; border: 1px;">제품명</th>
+               <th style="text-align: center; width: 25%; border: 1px;">평가</th>
             </tr>
          </thead>
          <tbody id = "ajaxTable2">
