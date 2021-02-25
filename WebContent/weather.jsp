@@ -32,8 +32,43 @@
 		$('#sidbarSection').css("visibility", "visible");
 	}
 </script>
+
+<!-- 슬라이드 기능 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script language="JavaScript">
+	$(document).ready(function() {
+		var $banner = $(".banner").find("ul");
+
+		var $bannerWidth = $banner.children().outerWidth();//이미지의 폭
+		var $bannerHeight = $banner.children().outerHeight(); // 높이
+		var $length = $banner.children().length;//이미지의 갯수
+		var rollingId;
+
+		//정해진 초마다 함수 실행
+		rollingId = setInterval(function() { rollingStart(); }, 3000);//다음 이미지로 롤링 애니메이션 할 시간차
+    
+		function rollingStart() {
+			$banner.css("width", $bannerWidth * $length + "px");
+			$banner.css("height", $bannerHeight + "px");
+			//alert(bannerHeight);
+			//배너의 좌측 위치를 옮겨 준다.
+			$banner.animate({left: - $bannerWidth + "px"}, 1500, function() { //숫자는 롤링 진행되는 시간이다.
+				//첫번째 이미지를 마지막 끝에 복사(이동이 아니라 복사)해서 추가한다.
+				$(this).append("<li>" + $(this).find("li:first").html() + "</li>");
+				//뒤로 복사된 첫번재 이미지는 필요 없으니 삭제한다.
+				$(this).find("li:first").remove();
+				//다음 움직임을 위해서 배너 좌측의 위치값을 초기화 한다.
+				$(this).css("left", 0);
+				//이 과정을 반복하면서 계속 롤링하는 배너를 만들 수 있다.
+			});
+		}
+	}); 
+  
+</script>
+
 </head>
 <style>
+
 #yellow {
 	color: green;
 	font-weight: bold;
@@ -180,29 +215,28 @@ table thead {
 
 				<!-- Logo -->
 				<h1 id="logo">
-					<a href="index.html">Today Skin Weather</a>
+					<a href="index.jsp" style="letter-spacing :3px;">Today Skin Weather</a>
 				</h1>
 				<p>당신의 피부를 안전하게 지켜주세요.</p>
 						<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								
-								<li><a class="icon solid fa-home" href="index.jsp"><span>HOME</span></a></li>
-								
-								<li display = hidden>
-									<a href="#" class="icon fa-chart-bar"><span>회원가입/로그인</span></a>
-									<ul>
-										<li><a href="join.jsp">회원가입</a></li>
-										<li><a href="login.jsp">로그인</a></li>
-									</ul>
-								</li>
-								<li><a class="icon solid fa-cog" href="camRecog.jsp"><span>OCR 이용 이미지 인식</span></a></li>
-								<li><a class="icon solid fa-retweet" href="mise"><span>날씨별 화장품 추천</span></a></li>
-								<li><a class="icon solid fa-sitemap" href="BefoHis"><span>나의 사용목록 추가</span></a></li>
-								<li><a class="icon solid fa-sitemap" href="BefoAller"><span>알러지 제보</span></a></li>
-							</ul>
-						</nav>
-
+                  <nav id="nav">
+                     <ul>
+                        
+                        <li><a class="icon solid fa-home" href="index.jsp"><span>HOME</span></a></li>
+                        
+                        <li display = hidden>
+                           <a href="#" class="icon fa-chart-bar"><span>회원가입/로그인</span></a>
+                           <ul>
+                              <li><a href="join.jsp">회원가입</a></li>
+                              <li><a href="login.jsp">로그인</a></li>
+                           </ul>
+                        </li>
+                        <li><a class="icon solid fa-cog" href="camRecog.jsp"><span>화장품 성분 분석</span></a></li>
+                        <li><a class="icon solid fa-retweet" href="mise"><span>날씨별 화장품 추천</span></a></li>
+                        <li><a class="icon solid fa-sitemap" href="BefoHis"><span>나의 사용목록 추가</span></a></li>
+                        <li><a class="icon solid fa-sitemap" href="BefoAller"><span>알러지 제보</span></a></li>
+                     </ul>
+                  </nav>
 			</div>
 		</section>
 
@@ -476,141 +510,61 @@ table thead {
 
 						<!-- Excerpts -->
 						<section id="sidbarSection">
-							<ul class="divided">
-								<li>
+						
+							<ul class="divided"">
+							<li>
 									<!-- 화장품 소개 1 -->
 									<article class="box excerpt">
 										<div class="yoseph2"></div>
 									</article>
-
 								</li>
 								<li>
 									<!-- 화장품 소개 2 -->
 									<article class="box excerpt">
 										<div class="yoseph3"></div>	
 									</article>
-
 								</li>
 								<li>
 									<!-- 화장품 소개 3 -->
 									<article class="box excerpt">
-										
 										<%if (Integer.parseInt(uvlist.get(2)) <= 2) {%>
 										<header>
 											<span class="date">디쥬 여행용 썬크림</span>
 										</header>
-										<a href="#" class="image featured"><img
-											src="images/PA+.jpg" /></a>
+										<a href="#" class="image featured"><img src="images/PA+.jpg" /></a>
 										<p>#피부톤을 밝게 <br> #피부결을 뽀송하게 <br> #자외선 차단 <br>#톤업선 크림</p>
 										<%} else if (Integer.parseInt(uvlist.get(2)) <= 5) {%>
 										<header>
 											<span class="date">순정 진정 방어 선크림</span>
 										</header>
-										<a href="#" class="image featured"><img
-											src="images/PA++.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="images/PA++.jpg" alt="" /></a>
 										<p>#피부진정 <br> #외부자극 케어 <br> #자외선 차단 <br>#무기 자외선 차단</p>
 										<%} else if (Integer.parseInt(uvlist.get(2)) <= 7) {%>
 										<header>
 											<span class="date">퍼펙트 선크림</span>
 										</header>
-										<a href="#" class="image featured"><img
-											src="images/PA+++.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="images/PA+++.jpg" alt="" /></a>
 										<p>#자외선 차단 <br> #해바라기 새싹으로 스트레스 받는 세포생성 감소 <br> #아사이베리 성분으로 자외선에 대한 피부방여력 증진 <br>#워터프루프로 물과 땀에 강함</p>
 										<%} else if (Integer.parseInt(uvlist.get(2)) <= 10) {%>
 										<header>
 											<span class="date">알로에 선크림</span>
 										</header>
-										<a href="#" class="image featured"><img
-											src="images/PA++++.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="images/PA++++.jpg" alt="" /></a>
 										<p>#피부톤을 밝게 <br> #끈적임 ZERO<br> #자외선 차단 <br>#발림성 & 흡수력</p>
 										<%}%>
 									</article>
-
-								</li>
-							</ul>
+									</li>
+								</ul>
+							
 						</section>
 					</div>
 				</div>
 			</div>
 		</section>
-
-		<!-- Footer -->
-		<!-- <section id="footer">
-			<div class="container">
-				<header>
-					<h2>
-						Questions or comments? <strong>Get in touch:</strong>
-					</h2>
-				</header>
-				<div class="row">
-					<div class="col-6 col-12-medium">
-						<section>
-							<form method="post" action="#">
-								<div class="row gtr-50">
-									<div class="col-6 col-12-small">
-										<input name="name" placeholder="Name" type="text" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input name="email" placeholder="Email" type="text" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<a href="#"
-											class="form-button-submit button icon solid fa-envelope">Send
-											Message</a>
-									</div>
-								</div>
-							</form>
-						</section>
-					</div>
-					<div class="col-6 col-12-medium">
-						<section>
-							<p>Erat lorem ipsum veroeros consequat magna tempus lorem
-								ipsum consequat Phaselamet mollis tortor congue. Sed quis mauris
-								sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu
-								malesuada.</p>
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<ul class="icons">
-										<li class="icon solid fa-home">1234 Somewhere Road<br />
-											Nashville, TN 00000<br /> USA
-										</li>
-										<li class="icon solid fa-phone">(000) 000-0000</li>
-										<li class="icon solid fa-envelope"><a href="#">info@untitled.tld</a>
-										</li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="icons">
-										<li class="icon brands fa-twitter"><a href="#">@untitled</a>
-										</li>
-										<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled</a>
-										</li>
-										<li class="icon brands fa-dribbble"><a href="#">dribbble.com/untitled</a>
-										</li>
-										<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</div>
-				</div>
-			</div>
-			<div id="copyright" class="container">
-				<ul class="links">
-					<li>&copy; Untitled. All rights reserved.</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</section>
-	</div> -->
 	
 			<div id="copyright" class="container">
 				<ul class="links">
-					<li>© Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					<li>© Untitled. All rights reserved.</li><li>Design: <a href="#">장요셉</a></li>
 				</ul>
 			</div>
 
