@@ -23,6 +23,10 @@
 		
 			background-color: floralwhite !important;
 		}
+		
+		#goReport{
+			color : floralwhite !important;
+		}
 
 		</style>
 	</head>
@@ -90,7 +94,7 @@
 										<header>
 											<h3>카메라를 이용한 화장품 성분 분석!</h3>
 										</header>
-										<p>촬영을 통해 화장품의 성분을 확인하고 자신에게 적합하지 않은 성분을 찾아내 알려주고 추천을 통해 구매에 도움을 드려요! </p>
+										<p>촬영을 통해 화장품의 성분을 확인하고 자신에게 적합하지 않은 성분을 찾아내 알려주고 <br>구매에 도움을 드려요! </p>
 									</section>
 
 							</div>
@@ -102,10 +106,14 @@
 
 			<!-- Banner -->
 				<section id="banner">
-					<div class="container">
+				<a id ="goReport" href ="BefoAller"> 
+					<div class="container" >
+						<div><img src ="./images/alert.png" style="width: 65px;
+    height: 65px;"></div>
 						<p>당신의 피부를 지키기 위해 </p>
 						<p>알러지 문의를 해주세요! </p>
 					</div>
+				</a>
 				</section>
 
 		
@@ -115,7 +123,7 @@
 					
 					<div id="copyright" class="container">
 						<ul class="links">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">JIN6IX__O</a></li>
 						</ul>
 					</div>
 				</section>
