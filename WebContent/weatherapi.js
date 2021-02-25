@@ -93,9 +93,9 @@ function loadWeather(data) {
     } 
 	 
 	else if(`${data.main.humidity}`<= 60){
-        $(".yoseph2").append("<header><span class='date'>닥터지 레드블레미쉬 클리어 수딩크림</span></header>");	
-        $(".yoseph2").append("<a href='#' class='image featured'><img src='images/good1.png'></a>")
-        $(".yoseph2").append("<p> #피부진정 <br> #수분충전 <br> #촉촉한 젤 크림 <br> #여드름성 피부 사용 가능 </p>")
+        $(".yoseph2").append("<header><span class='date'>라네즈 홀리데이 컬렉션 베이직 2종</span></header>");	
+        $(".yoseph2").append("<a href='#' class='image featured'><img src='images/good1_a.png'></a>")
+        $(".yoseph2").append("<p> #수분코어 강화 <br> #피부장벽 개선 <br> #보습 지속 효과 <br> #건성 추천 </p>")
     }
       
     else{
@@ -107,21 +107,21 @@ function loadWeather(data) {
     
     
     if(`${data.main.humidity}`< 40){
-        $(".yoseph3").append("<header><span class='date'>워터퓨즈 하이드로 듀 드랍</span></header>");	
-        $(".yoseph3").append("<a href='#' class='image featured'><img src='images/dry2.jpg'></a>")
-        $(".yoseph3").append("<p> #유수분 밸런스 <br> #수분보관 <br> #크리스탈 수분방울 <br> #빠른 흡수 </p>")
+        $(".yoseph3").append("<header><span class='date'>모이스춰 플럼핑 듀이 미스트</span></header>");	
+        $(".yoseph3").append("<a href='#' class='image featured'><img src='images/dry1_a.jpg'></a>")
+        $(".yoseph3").append("<p> #촉촉탱탱생기충전 <br> #이슬비미스트 <br> #수분플럼핑 루틴 <br> #파티그 모멘트 케어 </p>")
     } 
 	 
 	else if(`${data.main.humidity}`<= 60){
-        $(".yoseph3").append("<header><span class='date'>프리 울트라 모이스쳐라이징 로션</span></header>");
-        $(".yoseph3").append("<a href='#' class='image featured'><img src='images/good2.jpg'></a>")
-        $(".yoseph3").append("<p> #피부진정 <br> #민감성피부 <br> #보습로션 <br> #만능로션 </p>")	
+        $(".yoseph3").append("<header><span class='date'>래디언-C크림</span></header>");
+        $(".yoseph3").append("<a href='#' class='image featured'><img src='images/good2_a.jpg'></a>")
+        $(".yoseph3").append("<p> #비타민폭탄 <br> #굿바이잡티 <br> #저자극케어 <br> #피부탄력 </p>")	
     }
       
     else{
-        $(".yoseph3").append("<header><span class='date'>플랑크톤 피부강화 에센스 로션</span></header>");	
-        $(".yoseph3").append("<a href='#' class='image featured'><img src='images/wet2.jpg'></a>")
-        $(".yoseph3").append("<p> #피부 스트레스 완화 <br> #저자극 <br> #밝은 피부톤 <br> #피부 장벽 강화 </p>")
+        $(".yoseph3").append("<header><span class='date'>프리메라 페이셜 마일드 필링</span></header>");	
+        $(".yoseph3").append("<a href='#' class='image featured'><img src='images/wet1.jpg'></a>")
+        $(".yoseph3").append("<p> #피부 노폐물 제거 <br> #저자극 <br> #피부막 형성 <br> #피부결 개선 </p>")
     }
 };
 

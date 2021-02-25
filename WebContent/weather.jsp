@@ -497,28 +497,28 @@ table thead {
 									<article class="box excerpt">
 										<%if (Integer.parseInt(uvlist.get(2)) <= 2) {%>
 										<header>
-											<span class="date">디쥬 여행용 썬크림</span>
+											<span class="date">올인원 톤업 크림 PA++</span>
 										</header>
-										<a href="#" class="image featured"><img src="images/PA+.jpg" /></a>
-										<p>#피부톤을 밝게 <br> #피부결을 뽀송하게 <br> #자외선 차단 <br>#톤업선 크림</p>
+										<a href="#" class="image featured"><img src="images/PA++_all.png" /></a>
+										<p>#칙칙한 톤이 고민인 분 <br>#부담스러운 화장이 싫으신 분 <br> #탄력 케어까지 원할 때 <br>#에센스+톤업+선크림을 하나로!</p>
 										<%} else if (Integer.parseInt(uvlist.get(2)) <= 5) {%>
 										<header>
-											<span class="date">순정 진정 방어 선크림</span>
+											<span class="date">한율 흰감국 광채 선 젤 PA++</span>
 										</header>
-										<a href="#" class="image featured"><img src="images/PA++.jpg" alt="" /></a>
-										<p>#피부진정 <br> #외부자극 케어 <br> #자외선 차단 <br>#무기 자외선 차단</p>
+										<a href="#" class="image featured"><img src="images/PA++_han.jpg" alt="" /></a>
+										<p>#자외선 차단 <br> #미백 기능성 <br> #보습/광채 <br>#미백 기능성 수분</p>
 										<%} else if (Integer.parseInt(uvlist.get(2)) <= 7) {%>
 										<header>
-											<span class="date">퍼펙트 선크림</span>
+											<span class="date">선 메이트 프로텍터 PA+++</span>
 										</header>
-										<a href="#" class="image featured"><img src="images/PA+++.jpg" alt="" /></a>
-										<p>#자외선 차단 <br> #해바라기 새싹으로 스트레스 받는 세포생성 감소 <br> #아사이베리 성분으로 자외선에 대한 피부방여력 증진 <br>#워터프루프로 물과 땀에 강함</p>
+										<a href="#" class="image featured"><img src="images/PA+++_hera.jpg" alt="" /></a>
+										<p>#자외선 차단 <br> #미세먼지로부터 보호 <br> #윤광 피부 <br>#기초 케어</p>
 										<%} else if (Integer.parseInt(uvlist.get(2)) <= 10) {%>
 										<header>
-											<span class="date">알로에 선크림</span>
+											<span class="date">선 메이트 레포츠 프로 워터프루프 PA++++</span>
 										</header>
-										<a href="#" class="image featured"><img src="images/PA++++.jpg" alt="" /></a>
-										<p>#피부톤을 밝게 <br> #끈적임 ZERO<br> #자외선 차단 <br>#발림성 & 흡수력</p>
+										<a href="#" class="image featured"><img src="images/PA++++_hera.jpg" alt="" /></a>
+										<p>#강력한 자외선 차단 <br> #워터프루프 기능<br> #피부진정효과 <br>#기초 케어</p>
 										<%}%>
 									</article>
 									</li>
