@@ -92,11 +92,12 @@ h2 {
 	position : relative;
 	text-transform : uppercase;
 	background-size : cover;
-	padding : 10em 0;
+	padding-top: 8em;
+	padding-bottom: 15em;	
 }
 .weather-container {
 		
-		padding: 30px;
+		padding: 10px;
         text-align: center;
         background-color: #ffffff;
         background-color: rgba( 255, 255, 255, 0.9 ) ;
@@ -152,7 +153,7 @@ h2 {
 }
 
 table thead {
-			background: cornsilk;
+			background: #E9A19B;
 			color: #fff;
 			font-weight: 900;
 			text-transform: uppercase;
@@ -212,7 +213,6 @@ table thead {
 
 				<section class='weather-container'>
 					<table>
-
 						<thead class="thead">
 							<tr>
 								<th class="one">도시</th>
@@ -408,7 +408,6 @@ table thead {
 													<option value="3600">1시간</option>
 													<option value="1800">30분</option>
 													<option value="900">15분</option>
-													<option value="1">1초</option>
 											</select><br> <input type="button" value="GO!" onclick="noodle()" style="cursor: pointer;">
 												<br> <br> <span id="countdown">Time
 													Selected</span> <br> <br> <!-- <input type="button" value="Close"
