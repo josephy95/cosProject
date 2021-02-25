@@ -103,7 +103,7 @@ String id = member.getId();
 
 				<!-- Logo -->
 				<h1 id="logo">
-					<a href="index.jsp"> Search Ingredient 준석아 알려줘</a>
+					<a href="index.jsp"> Check The Ingredients</a>
 				</h1>
 				<p>카메라를 이용한 성분 확인</p>
 
@@ -297,18 +297,19 @@ String id = member.getId();
                 	
                 	// 바의 색깔이 어떤걸 의미하는지 알려주는 코드
                 	$('#main').append("<div style='display: flex; justify-content: center;'><div style='width: 20px; height: 20px; background-color: #99A1C6;'></div><span style='padding-left: 10px;'>나랑 안맞는 성분</span><div style='width: 20px; height: 20px; background-color: #E9A19B; margin-left: 10px;'></div><span style='padding-left: 10px;'>유해 성분</span><div style='width: 20px; height: 20px; background-color: #86DCBD; margin-left: 10px;'></div><span style='padding-left: 10px;'>나머지 성분</span></div></div>");
+                    $('#main').append("<br>");
                     
                     // 성분이 어떤게 있는지 알려주는 코드
                     // 나랑 안맞는 성분
-                    $('#main').append("<div class='eleList' style='display: flex;'><div style='width: 20px; height: 20px; background-color: #99A1C6;'></div><span style='padding-left: 10px;'>나랑 안맞는 성분 :</span><span style='padding-left: 10px;'id='notMine'></span></div><br>");
-                    for(let i = 0; i < my; i++;){
+                    $('#main').append("<div class='eleList' style='display: flex; padding-left: 6rem'><div style='width: 20px; height: 20px; background-color: #99A1C6;'></div><span style='padding-left: 10px;'>나랑 안맞는 성분 :</span><span style='padding-left: 10px;'id='notMine'></span></div><br>");
+                    for(let i = 0; i < my; i++){
                     	$('#notMine').append(result.myNotData[i]);
 						if(i != my-1){
 							$("#notMine").append(",");
 						}
                     }
-                    $('#main').append("<div class='eleList' style='display: flex;'><div style='width: 20px; height: 20px; background-color: #E9A19B;'></div><span style='padding-left: 10px;'>유해 성분 :</span><span style='padding-left: 10px;' id ='harmEle'></span></div>");
-                    for(let i = 0; i < harm; i++;){
+                    $('#main').append("<div class='eleList' style='display: flex; padding-left: 6rem'><div style='width: 20px; height: 20px; background-color: #E9A19B;'></div><span style='padding-left: 10px;'>유해 성분 :</span><span style='padding-left: 10px;' id ='harmEle'></span></div>");
+                    for(let i = 0; i < harm; i++){
                     	$('#harmEle').append(result.harmfulList[i]);
 						if(i != harm-1){
 							$("#harmEle").append(",");
