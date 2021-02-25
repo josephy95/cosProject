@@ -288,6 +288,7 @@ String id = member.getId();
                     let harm = result.harmfulList.length;
                     // 나머지 성분 개수 길이
                     let rest = result.imgData.length;
+                    
                    	
                     
                     
@@ -297,6 +298,12 @@ String id = member.getId();
                     let dv2Width = parseInt(600 * (harm / total));
                     let dv3Width = parseInt(600 * (rest / total));
 					
+                    let dv1Per = 100*(my/total);
+                    let dv1Per = dv1Per.toFixed(2);
+                    let dv2Per = 100*(harm/total).toFixed(2);
+                    let dv2Per = dv2Per.toFixed(2);
+                    let dv3Per = 100*(rest/total).toFixed(2);
+                    let dv3Per = dv3Per.toFixed(2);
                     $('#result').css("text-align", "-webkit-center");
                     
                     $('#result').append("<br><br>")
@@ -306,7 +313,7 @@ String id = member.getId();
                 	$('#result').append("<div>")
                 	
                 	// 바의 색깔이 어떤걸 의미하는지 알려주는 코드
-                	$('#result').append("<div style='display: flex; justify-content: center;'><div style='width: 20px; height: 20px; background-color: #99A1C6;'></div><span style='padding-left: 10px;'>나랑 안맞는 성분</span><div style='width: 20px; height: 20px; background-color: #E9A19B; margin-left: 10px;'></div><span style='padding-left: 10px;'>유해 성분</span><div style='width: 20px; height: 20px; background-color: #86DCBD; margin-left: 10px;'></div><span style='padding-left: 10px;'>나머지 성분</span></div></div>");
+                	$('#result').append("<div style='display: flex; justify-content: center;'><div style='width: 20px; height: 20px; background-color: #99A1C6;'></div><span style='padding-left: 10px;'>나랑 안맞는 성분 : "+dv1Per+"%</span><div style='width: 20px; height: 20px; background-color: #E9A19B; margin-left: 10px;'></div><span style='padding-left: 10px;'>유해 성분 : "+dv2Per+"%</span><div style='width: 20px; height: 20px; background-color: #86DCBD; margin-left: 10px;'></div><span style='padding-left: 10px;'>나머지 성분 : "+dv3Per+"%</span></div></div>");
                     $('#result').append("<br>");
                     
                     // 성분이 어떤게 있는지 알려주는 코드
