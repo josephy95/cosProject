@@ -37,14 +37,16 @@ html, body {
 
 #camera, #camera--view, #camera--sensor, #camera--output {
 	position: inherit;
-	height: 290px;
-	width: 350px;
+	/* height: 290px;
+	width: 350px; */
 	object-fit: contain;
 }
 
 #camera--view, #camera--sensor, #camera--output {
 	transform: scaleX(-1);
 	filter: FlipH;
+	height: 380px;
+	width: 500px;
 }
 
 #camera--trigger, #sendUrl {
@@ -61,8 +63,8 @@ html, body {
 }
 
 .taken {
-	height: 280px !important;
-	width: 560px !important;
+	height: 380px !important;
+	width: 500px !important;
 }
 
 #buttons {
@@ -85,6 +87,9 @@ html, body {
 	/* 사진을 거울처럼 보기 */
 	position: contain;
 }
+
+
+
 </style>
 <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
 
@@ -103,9 +108,8 @@ String id = member.getId();
 
 				<!-- Logo -->
 				<h1 id="logo">
-					<a href="index.jsp"> Check The Ingredients</a>
+					<a href="index.jsp">카메라를 이용한 성분 확인</a>
 				</h1>
-				<p>카메라를 이용한 성분 확인</p>
 
 				<!-- Logo -->
 
@@ -151,49 +155,45 @@ String id = member.getId();
 
 
 					<!-- Content -->
+						<header1 align="center">
+							<h2>촬영을 통해 성분을 분석하고 <br> <strong>나에게 맞지 않는 성분</strong>을 찾아요.</h2>
+							</header1>
 					<div id="content" class="col-8 col-12-medium imp-medium">
 
 						<!-- Post --><!-- 
 						<article class="box post"> -->
-							<header1 align="center">
-							<h2>촬영을 통해 성분을 분석하고 <br>나에게 맞지 않는 성분을 찾아요.</h2>
-							</header1>
+						
 							<br>
-							<div style="text-align: center;">
+							<div style="text-align: center; height: 350px">
 								<main id="camera">
 									<canvas id="camera--sensor"></canvas>
 
 									<!-- 기기의 카메라에 접근하여 영상을 페이지에 재생한다. -->
-									<video id="camera--view" autoplay playsinline
-										style="visibility: hidden; width: 0; height: 0;"></video>
+									<video id="camera--view" autoplay playsinline style="margin-left: 20px;"></video>
 
-									<img src="./images/cam.png" alt="" id="camera--output"
-										style="position: absolute; padding-right: 41px">
-									<!-- 고라파덕 부분에 카메라 이미지 넣어서 찍는거 조절하기... img 크기 조절도 해야해 -->
+									<img src="./images/cam.png" alt="" id="camera--output" style="visibility: hidden; width: 0px;">
+									<!-- 카메라 이미지 넣어서 찍는거 조절하기... img 크기 조절도 해야해 -->
 
 								</main>
 							</div>
 					<!-- 
 
 						</article> -->
-						<div style="width: 150px; height: 150px;"></div>
+						<div style="width: 100px; height: 100px;"></div>
 
-						<div id="buttons">
-
-							<%-- <form action="http://118.40.82.69:9000/imgUp" method="post"
-								enctype="multipart/form-data">
-								<input type="hidden" name='memId' value="<%=id%>"> <input
-									type="hidden" name="inputUrl" id="inputUrl" value="">
-								<input type="submit" id="sendUrl" value="분석하기">
-							</form> --%>
-							
-							
-							<button id="sendUrl" style ="font-family: inherit;" >분석하기</button>
-							<button id="camera--trigger" style ="font-family: inherit;">사진촬영</button>
-						</div>
+				
 
 						<p></p>
 					</div>
+					<div id ="camRecogButton" style ="display : flex; place-content: center;"> 
+							<button id="sendUrl" style ="font-family: inherit;" >분석하기</button>
+							
+							<button id="camera--trigger" style ="font-family: inherit; margin-left: 20px;">사진촬영</button>
+					</div>
+					
+					
+					
+					<div id = "result">  </div>
 
 				
 			</div>
@@ -246,7 +246,11 @@ String id = member.getId();
             cameraOutput.classList.add("taken");
             console.log(cameraSensor.height);
           
-            $("#camera--output").css("padding-right", "200px");
+            /* $("#camera--output").css("padding-right", "200px"); */
+            
+           	$("#camera--output").css("visibility", "visible");
+            $("#camera--view").css("width","0px");
+            $("#camera--view").css("height","0px");
         });
        /*  function imgSend(){
         	$.ajax({
@@ -269,7 +273,7 @@ String id = member.getId();
                 dataType: "json",
                 success: function (result) {
 /* 		    			alert(result); 바꿔
-*/		    $('#main').empty();
+*/		    $('#result').empty();
                     // 나랑 안맞는 성분 개수 길이
                     console.log("들어오니");
                     console.log(result.myNotData.length);
@@ -287,28 +291,28 @@ String id = member.getId();
                     let dv2Width = parseInt(600 * (harm / total));
                     let dv3Width = parseInt(600 * (rest / total));
 					
-                    $('#main').css("text-align", "-webkit-center");
+                    $('#result').css("text-align", "-webkit-center");
                     
-                    $('#main').append("<br><br>")
-                    $('#main').append("<div style ='text-align: -webkit-center;'>")
-                    $('#main').append("<div style='display: flex; width: 600px;' id='colorContainer'><div style='background-color: #99A1C6; height: 5rem; width :" + dv1Width + "px;' class='dv1'> </div><div class='dv2' style='background-color: #E9A19B; height: 5rem; width :" + dv2Width + "px;'> </div><div class='dv3' style = 'background-color: #86DCBD; height: 5rem;width :" + dv3Width + "px;'> </div></div>")
-                    $('#main').append("<br>")
-                	$('#main').append("<div>")
+                    $('#result').append("<br><br>")
+                    $('#result').append("<div style ='text-align: -webkit-center;'>")
+                    $('#result').append("<div style='display: flex; width: 600px;' id='colorContainer'><div style='background-color: #99A1C6; height: 5rem; width :" + dv1Width + "px;' class='dv1'> </div><div class='dv2' style='background-color: #E9A19B; height: 5rem; width :" + dv2Width + "px;'> </div><div class='dv3' style = 'background-color: #86DCBD; height: 5rem;width :" + dv3Width + "px;'> </div></div>")
+                    $('#result').append("<br>")
+                	$('#result').append("<div>")
                 	
                 	// 바의 색깔이 어떤걸 의미하는지 알려주는 코드
-                	$('#main').append("<div style='display: flex; justify-content: center;'><div style='width: 20px; height: 20px; background-color: #99A1C6;'></div><span style='padding-left: 10px;'>나랑 안맞는 성분</span><div style='width: 20px; height: 20px; background-color: #E9A19B; margin-left: 10px;'></div><span style='padding-left: 10px;'>유해 성분</span><div style='width: 20px; height: 20px; background-color: #86DCBD; margin-left: 10px;'></div><span style='padding-left: 10px;'>나머지 성분</span></div></div>");
-                    $('#main').append("<br>");
+                	$('#result').append("<div style='display: flex; justify-content: center;'><div style='width: 20px; height: 20px; background-color: #99A1C6;'></div><span style='padding-left: 10px;'>나랑 안맞는 성분</span><div style='width: 20px; height: 20px; background-color: #E9A19B; margin-left: 10px;'></div><span style='padding-left: 10px;'>유해 성분</span><div style='width: 20px; height: 20px; background-color: #86DCBD; margin-left: 10px;'></div><span style='padding-left: 10px;'>나머지 성분</span></div></div>");
+                    $('#result').append("<br>");
                     
                     // 성분이 어떤게 있는지 알려주는 코드
                     // 나랑 안맞는 성분
-                    $('#main').append("<div class='eleList' style='display: flex; padding-left: 6rem'><div style='width: 20px; height: 20px; background-color: #99A1C6;'></div><span style='padding-left: 10px;'>나랑 안맞는 성분 :</span><span style='padding-left: 10px;'id='notMine'></span></div><br>");
+                    $('#result').append("<div class='eleList' style='display: flex; padding-left: 6rem'><div style='width: 20px; height: 20px; background-color: #99A1C6;'></div><span style='padding-left: 10px;'>나랑 안맞는 성분 :</span><span style='padding-left: 10px;'id='notMine'></span></div><br>");
                     for(let i = 0; i < my; i++){
                     	$('#notMine').append(result.myNotData[i]);
 						if(i != my-1){
 							$("#notMine").append(",");
 						}
                     }
-                    $('#main').append("<div class='eleList' style='display: flex; padding-left: 6rem'><div style='width: 20px; height: 20px; background-color: #E9A19B;'></div><span style='padding-left: 10px;'>유해 성분 :</span><span style='padding-left: 10px;' id ='harmEle'></span></div>");
+                    $('#result').append("<div class='eleList' style='display: flex; padding-left: 6rem'><div style='width: 20px; height: 20px; background-color: #E9A19B;'></div><span style='padding-left: 10px;'>유해 성분 :</span><span style='padding-left: 10px;' id ='harmEle'></span></div>");
                     for(let i = 0; i < harm; i++){
                     	$('#harmEle').append(result.harmfulList[i]);
 						if(i != harm-1){
