@@ -289,8 +289,8 @@ String id = member.getId();
                     // 나머지 성분 개수 길이
                     let rest = result.imgData.length;
                     
-                   	
                     
+                   	
                     
 
                     let total = my + harm + rest;
@@ -325,21 +325,52 @@ String id = member.getId();
 							$("#notMine").append(",");
 						}
                     }
-                    $('#result').append("<div class='eleList' id='badEle' style='display: flex; padding-left: 6rem'><div style='width: 20px; height: 20px; background-color: #E9A19B;'></div><span style='padding-left: 10px;'>유해 성분 :</span><span style='padding-left: 10px;' id ='harmEle'></span></div>");
+                    $('#result').append("<div class='eleList' id='badEle' style='display: flex; padding-left: 6rem'><div style='width: 20px; height: 20px; background-color: #E9A19B;'></div><span style='padding-left: 10px;'>유해 성분 :</span><span style='padding-left: 10px; display :flex;' id ='harmEle'></span></div>");
                     for(let i = 0; i < harm; i++){
-                    	$('#harmEle').append(result.harmfulList[i]);
+                    	$('#harmEle').append("<p class ='harmEle'>"+result.harmfulList[i]+"</p>");
+                    	
 						if(i != harm-1){
 							$("#harmEle").append(",");
 						}
                     }
                     
+                    
+                    
                     $('#result').append("<br>");
                     $('#result').append("<div id='badEleDesc'></div>");
-                    $('#badEle').hover(function () {
+                    $(".harmEle").hover(function(){
+                		var value = $(this).text();
+                		
+                		 $.ajax({
+                        		url : "BadEle?badEle="+value,
+                        		type : "GET",
+                        		dataType: "json",
+     	                   		 success: function (result) {
+     	                   			 $('#badEleDesc').append(result.symptom);
+     	                   			 
+     	                   		/* for(let i = 0; i<result.length; i++){
+     	                   			var box =  document.getElementByClassName('harmEle'+i)
+     	                   			box.addEventListener('mouseover',function(){
+     	                   			 $('#badEleDesc').append(result.harmfulList[i]);
+     	                   			})
+     	                   			box.addEventListener('mouseout',function(){
+     	                   			 $('#badEleDesc').empty();
+     	                   			})
+     	                   		} */
+     	                   	 }
+                        	})
+                		
+                		
+                	}, function(){
+                		$('#badEleDesc').empty();
+                	});
+                   
+                    
+                   /*  $('.harmlist"+i+"').hover(function () {
                         $('#badEleDesc').append("대표적인 방부제로 체내 흡수 시 마취작용 및 자극유발");
                     }, function () {
                         $('#badEleDesc').empty();
-                    })
+                    }) */
                     
                     
                 },
@@ -352,6 +383,7 @@ String id = member.getId();
         });
        
         
+       
     </script>
 
 	<!-- Scripts -->
