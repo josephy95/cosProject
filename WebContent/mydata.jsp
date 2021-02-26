@@ -280,16 +280,16 @@ table thead {
       <table class="selectTable" style="text-align: center; border: 1px solid">
          <thead>
             <tr>
-               <th style="text-align: center; width: 95px; border: 1px;">회사명</th>
-               <th style="text-align: center; width: 150px; border: 1px;">제품명</th>
-               <th style="text-align: center; width: 150px; border: 1px;">사진</th>
-                <th style="text-align: center; width: 150px; border: 1px;">평가</th>
+               <th style="text-align: center; width: 15%; border: 1px;">회사명</th>
+               <th style="text-align: center; width: 30%; border: 1px;">제품명</th>
+               <th style="text-align: center; width: 30%; border: 1px;">사진</th>
+                <th style="text-align: center; width: 25%; border: 1px;">평가</th>
             </tr>
          </thead>
          <tbody id="ajaxTable">
          <%for(int i = 0; i< cosList.size(); i++) {%>
             <tr>
-               <td><%=cosList.get(i).getCompany() %></td>
+               <td style="font-size: 1em"><%=cosList.get(i).getCompany() %></td>
                <td><%=cosList.get(i).getProName() %></td>
                <td><img class='imgs' src ="images/cosImgs/<%=cosList.get(i).getPath() %>.jpg"></td>
                <td style ='display:flex;padding-top: 60px;'><button class='GOOD' id ="<%=cosList.get(i).getProNum() %>"><img src='./images/up.png'></button><button class='BAD' id ="<%=cosList.get(i).getProNum() %>"><img src ='./images/down.png' style='padding-top:13px;'></button></td>

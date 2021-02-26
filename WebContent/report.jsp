@@ -222,7 +222,14 @@
 				</section>
 
 		</div>
-
+<script>
+    // div에 onclick이벤트를 줘서 div를 클릭했을경우 test라는 함수를 호출합니다.
+    // 호출 시 "테스트2입니다요."라는 alert가 뜬다.
+    function test(){ 
+        alert("제보목록에 추가되었습니다.");
+    }
+</script>
+ 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
