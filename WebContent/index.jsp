@@ -56,7 +56,7 @@
 										<li><a href="login.jsp">로그인</a></li>
 									</ul>
 								</li>
-								<li><a class="icon solid fa-cog" href="camRecog.jsp"><span>OCR 이용 이미지 인식</span></a></li>
+								<li><a class="icon solid fa-cog" href="camRecog.jsp"><span>화장품 성분 분석</span></a></li>
 								<li><a class="icon solid fa-retweet" href="mise"><span>날씨별 화장품 추천</span></a></li>
 								<li><a class="icon solid fa-sitemap" href="BefoHis"><span>나의 사용목록 추가</span></a></li>
 								<li><a class="icon solid fa-sitemap" href="BefoAller"><span>알러지 제보</span></a></li>
@@ -70,7 +70,7 @@
 				<section id="features" class ="backimg">
 					<div class="container">
 						<header>
-							<h2 style="font-size:1.5em;">성분 분석과 날씨추천을 통해 당신의 피부를 지켜요!</h2>
+							<h2 style="font-size:1.5em; letter-spacing: 1px;">성분 분석과 날씨추천을 통해 당신의 피부를 지켜요!</h2>
 							<br>
 						</header>
 						<div class="row aln-center">
@@ -94,7 +94,7 @@
 										<header>
 											<h3>카메라를 이용한 화장품 성분 분석!</h3>
 										</header>
-										<p>촬영을 통해 화장품의 성분을 확인하고 자신에게 적합하지 않은 성분을 찾아내 알려주고 <br>구매에 도움을 드려요! </p>
+										<p>촬영을 통해 화장품의 성분을 확인하고 자신에게 적합하지 않은 성분을 찾아내 알려주고 구매에 도움을 드려요! </p>
 									</section>
 
 							</div>

@@ -32,8 +32,11 @@
 		$('#sidbarSection').css("visibility", "visible");
 	}
 </script>
+
+
 </head>
 <style>
+
 #yellow {
 	color: green;
 	font-weight: bold;
@@ -92,11 +95,12 @@ h2 {
 	position : relative;
 	text-transform : uppercase;
 	background-size : cover;
-	padding : 10em 0;
+	padding-top: 8em;
+	padding-bottom: 15em;	
 }
 .weather-container {
 		
-		padding: 30px;
+		padding: 10px;
         text-align: center;
         background-color: #ffffff;
         background-color: rgba( 255, 255, 255, 0.9 ) ;
@@ -152,7 +156,7 @@ h2 {
 }
 
 table thead {
-			background: cornsilk;
+			background: #E9A19B;
 			color: #fff;
 			font-weight: 900;
 			text-transform: uppercase;
@@ -179,29 +183,28 @@ table thead {
 
 				<!-- Logo -->
 				<h1 id="logo">
-					<a href="index.html">Today Skin Weather</a>
+					<a href="index.jsp" style="letter-spacing :3px;">Today Skin Weather</a>
 				</h1>
 				<p>당신의 피부를 안전하게 지켜주세요.</p>
 						<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								
-								<li><a class="icon solid fa-home" href="index.jsp"><span>HOME</span></a></li>
-								
-								<li display = hidden>
-									<a href="#" class="icon fa-chart-bar"><span>회원가입/로그인</span></a>
-									<ul>
-										<li><a href="join.jsp">회원가입</a></li>
-										<li><a href="login.jsp">로그인</a></li>
-									</ul>
-								</li>
-								<li><a class="icon solid fa-cog" href="camRecog.jsp"><span>OCR 이용 이미지 인식</span></a></li>
-								<li><a class="icon solid fa-retweet" href="mise"><span>날씨별 화장품 추천</span></a></li>
-								<li><a class="icon solid fa-sitemap" href="BefoHis"><span>나의 사용목록 추가</span></a></li>
-								<li><a class="icon solid fa-sitemap" href="BefoAller"><span>알러지 제보</span></a></li>
-							</ul>
-						</nav>
-
+                  <nav id="nav">
+                     <ul>
+                        
+                        <li><a class="icon solid fa-home" href="index.jsp"><span>HOME</span></a></li>
+                        
+                        <li display = hidden>
+                           <a href="#" class="icon fa-chart-bar"><span>회원가입/로그인</span></a>
+                           <ul>
+                              <li><a href="join.jsp">회원가입</a></li>
+                              <li><a href="login.jsp">로그인</a></li>
+                           </ul>
+                        </li>
+                        <li><a class="icon solid fa-cog" href="camRecog.jsp"><span>화장품 성분 분석</span></a></li>
+                        <li><a class="icon solid fa-retweet" href="mise"><span>날씨별 화장품 추천</span></a></li>
+                        <li><a class="icon solid fa-sitemap" href="BefoHis"><span>나의 사용목록 추가</span></a></li>
+                        <li><a class="icon solid fa-sitemap" href="BefoAller"><span>알러지 제보</span></a></li>
+                     </ul>
+                  </nav>
 			</div>
 		</section>
 
@@ -212,7 +215,6 @@ table thead {
 
 				<section class='weather-container'>
 					<table>
-
 						<thead class="thead">
 							<tr>
 								<th class="one">도시</th>
@@ -408,7 +410,6 @@ table thead {
 													<option value="3600">1시간</option>
 													<option value="1800">30분</option>
 													<option value="900">15분</option>
-													<option value="1">1초</option>
 											</select><br> <input type="button" value="GO!" onclick="noodle()" style="cursor: pointer;">
 												<br> <br> <span id="countdown">Time
 													Selected</span> <br> <br> <!-- <input type="button" value="Close"
@@ -477,145 +478,65 @@ table thead {
 
 						<!-- Excerpts -->
 						<section id="sidbarSection">
-							<ul class="divided">
-								<li>
+						
+							<ul class="divided"">
+							<li>
 									<!-- 화장품 소개 1 -->
 									<article class="box excerpt">
 										<div class="yoseph2"></div>
 									</article>
-
 								</li>
 								<li>
 									<!-- 화장품 소개 2 -->
 									<article class="box excerpt">
 										<div class="yoseph3"></div>	
 									</article>
-
 								</li>
 								<li>
 									<!-- 화장품 소개 3 -->
 									<article class="box excerpt">
-										
 										<%if (Integer.parseInt(uvlist.get(2)) <= 2) {%>
 										<header>
-											<span class="date">디쥬 여행용 썬크림</span>
+											<span class="date">올인원 톤업 크림 PA++</span>
 										</header>
-										<a href="#" class="image featured"><img
-											src="images/PA+.jpg" /></a>
-										<p>#피부톤을 밝게 <br> #피부결을 뽀송하게 <br> #자외선 차단 <br>#톤업선 크림</p>
+										<a href="#" class="image featured"><img src="images/PA++_all.png" /></a>
+										<p>#칙칙한 톤이 고민인 분 <br>#부담스러운 화장이 싫으신 분 <br> #탄력 케어까지 원할 때 <br>#에센스+톤업+선크림을 하나로!</p>
 										<%} else if (Integer.parseInt(uvlist.get(2)) <= 5) {%>
 										<header>
-											<span class="date">순정 진정 방어 선크림</span>
+											<span class="date">한율 흰감국 광채 선 젤 PA++</span>
 										</header>
-										<a href="#" class="image featured"><img
-											src="images/PA++.jpg" alt="" /></a>
-										<p>#피부진정 <br> #외부자극 케어 <br> #자외선 차단 <br>#무기 자외선 차단</p>
+										<a href="#" class="image featured"><img src="images/PA++_han.jpg" alt="" /></a>
+										<p>#자외선 차단 <br> #미백 기능성 <br> #보습/광채 <br>#미백 기능성 수분</p>
 										<%} else if (Integer.parseInt(uvlist.get(2)) <= 7) {%>
 										<header>
-											<span class="date">퍼펙트 선크림</span>
+											<span class="date">선 메이트 프로텍터 PA+++</span>
 										</header>
-										<a href="#" class="image featured"><img
-											src="images/PA+++.jpg" alt="" /></a>
-										<p>#자외선 차단 <br> #해바라기 새싹으로 스트레스 받는 세포생성 감소 <br> #아사이베리 성분으로 자외선에 대한 피부방여력 증진 <br>#워터프루프로 물과 땀에 강함</p>
+										<a href="#" class="image featured"><img src="images/PA+++_hera.jpg" alt="" /></a>
+										<p>#자외선 차단 <br> #미세먼지로부터 보호 <br> #윤광 피부 <br>#기초 케어</p>
 										<%} else if (Integer.parseInt(uvlist.get(2)) <= 10) {%>
 										<header>
-											<span class="date">알로에 선크림</span>
+											<span class="date">선 메이트 레포츠 프로 워터프루프 PA++++</span>
 										</header>
-										<a href="#" class="image featured"><img
-											src="images/PA++++.jpg" alt="" /></a>
-										<p>#피부톤을 밝게 <br> #끈적임 ZERO<br> #자외선 차단 <br>#발림성 & 흡수력</p>
+										<a href="#" class="image featured"><img src="images/PA++++_hera.jpg" alt="" /></a>
+										<p>#강력한 자외선 차단 <br> #워터프루프 기능<br> #피부진정효과 <br>#기초 케어</p>
 										<%}%>
 									</article>
-
-								</li>
-							</ul>
+									</li>
+								</ul>
+							
 						</section>
 					</div>
 				</div>
 			</div>
 		</section>
-
-		<!-- Footer -->
-		<!-- <section id="footer">
-			<div class="container">
-				<header>
-					<h2>
-						Questions or comments? <strong>Get in touch:</strong>
-					</h2>
-				</header>
-				<div class="row">
-					<div class="col-6 col-12-medium">
-						<section>
-							<form method="post" action="#">
-								<div class="row gtr-50">
-									<div class="col-6 col-12-small">
-										<input name="name" placeholder="Name" type="text" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input name="email" placeholder="Email" type="text" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<a href="#"
-											class="form-button-submit button icon solid fa-envelope">Send
-											Message</a>
-									</div>
-								</div>
-							</form>
-						</section>
-					</div>
-					<div class="col-6 col-12-medium">
-						<section>
-							<p>Erat lorem ipsum veroeros consequat magna tempus lorem
-								ipsum consequat Phaselamet mollis tortor congue. Sed quis mauris
-								sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu
-								malesuada.</p>
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<ul class="icons">
-										<li class="icon solid fa-home">1234 Somewhere Road<br />
-											Nashville, TN 00000<br /> USA
-										</li>
-										<li class="icon solid fa-phone">(000) 000-0000</li>
-										<li class="icon solid fa-envelope"><a href="#">info@untitled.tld</a>
-										</li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="icons">
-										<li class="icon brands fa-twitter"><a href="#">@untitled</a>
-										</li>
-										<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled</a>
-										</li>
-										<li class="icon brands fa-dribbble"><a href="#">dribbble.com/untitled</a>
-										</li>
-										<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</div>
-				</div>
-			</div>
+	 
 			<div id="copyright" class="container">
 				<ul class="links">
-					<li>&copy; Untitled. All rights reserved.</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</div>
-		</section>
-	</div> -->
-	
-			<div id="copyright" class="container">
-				<ul class="links">
-					<li>© Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					<li>© Untitled. All rights reserved.</li><li>Design: <a href="#">장요셉</a></li>
 				</ul>
 			</div>
 
-	<!-- Scripts -->
+	<!-- Scripts -->  
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.dropotron.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
