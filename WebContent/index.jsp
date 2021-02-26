@@ -109,7 +109,7 @@
 				<a id ="goReport" href ="BefoAller"> 
 					<div class="container" >
 						<div><img src ="./images/alert.png" style="width: 65px;
-    height: 65px;"></div>
+   																   height: 65px;"></div>
 						<p>당신의 피부를 지키기 위해 </p>
 						<p>알러지 문의를 해주세요! </p>
 					</div>
