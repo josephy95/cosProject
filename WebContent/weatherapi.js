@@ -72,7 +72,7 @@ function loadWeather(data) {
 	 
 	 
 	if(`${data.main.humidity}`< 40){
-        $(".yoseph").append("<p>피부 수분은 <span style='color:#FFF000 ; font-weight:bold;'>건조</span> 합니다.</p><br>");	
+        $(".yoseph").append("<p>피부 수분은 <span style='color:#FFF000 ; font-weight:bold;'>건조</span> 합니다.<br></p>");	
     } 
 	 
 	else if(`${data.main.humidity}`<= 60){
@@ -88,7 +88,7 @@ function loadWeather(data) {
     
     if(`${data.main.humidity}`< 40){
         $(".yoseph2").append("<header><span class='date'>히알루론 모이스춰 수분크림</span></header>");
-        $(".yoseph2").append("<a href='#' class='image featured'><img src='images/dry1.jpg'></a>")
+        $(".yoseph2").append("<a href='#' class='image featured'><img src='images/dry1.png'></a>")
         $(".yoseph2").append("<p> #수분케어 <br> #끈적임 없는 사용감 <br> #피부윤기 <br> #페이스&바디 겸용 </p>")
     } 
 	 
@@ -108,7 +108,7 @@ function loadWeather(data) {
     
     if(`${data.main.humidity}`< 40){
         $(".yoseph3").append("<header><span class='date'>모이스춰 플럼핑 듀이 미스트</span></header>");	
-        $(".yoseph3").append("<a href='#' class='image featured'><img src='images/dry1_a.jpg'></a>")
+        $(".yoseph3").append("<a href='#' class='image featured'><img src='images/dry1_a.png'></a>")
         $(".yoseph3").append("<p> #촉촉탱탱생기충전 <br> #이슬비미스트 <br> #수분플럼핑 루틴 <br> #파티그 모멘트 케어 </p>")
     } 
 	 
